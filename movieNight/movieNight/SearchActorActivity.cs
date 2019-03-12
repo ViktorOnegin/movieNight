@@ -25,7 +25,7 @@ namespace movieNight
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.SearchActor);
             //Thread.Sleep(5000);
-            //var toolbar = FindViewById<Toolbar>(Resource.Id.SearchActor);
+            //var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
             //SetActionBar(toolbar);
             Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
