@@ -9,17 +9,49 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Android.Support.Design.Widget;
+using Android.Support.V4.View;
+using Android.Support.V4.Widget;
+using Android.Support.V7.App;
+using Android.Support.V7.Widget;
 
 namespace movieNight
 {
-    [Activity(Label = "ActorBioActivity")]
-    public class ActorBioActivity : Activity
+    [Activity(Theme = "@style/AppTheme.NoActionBar")]
+    public class ActorBioActivity : AppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.ActorBio);
-            // Create your application here
+
+            Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
+            SetSupportActionBar(toolbar);
+        }
+
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            MenuInflater.Inflate(Resource.Menu.ActorBioToolbar, menu);
+            return true;
+        }
+
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            int id = item.ItemId;
+            if (id == Resource.Id.home)
+            {
+                var activity = new Intent(this, typeof(MainActivity));
+                StartActivity(activity);
+                return true;
+            }
+            else if (id == Resource.Id.back)
+            {
+                var activity = new Intent(this, typeof(SearchActorActivity));
+                StartActivity(activity);
+                return true;
+            }
+
+            return base.OnOptionsItemSelected(item);
         }
     }
 }

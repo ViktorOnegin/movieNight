@@ -9,17 +9,51 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Android.Support.Design.Widget;
+using Android.Support.V4.View;
+using Android.Support.V4.Widget;
+using Android.Support.V7.App;
+using System.Threading;
 
 namespace movieNight
 {
-    [Activity(Label = "SearchActorActivity")]
-    public class SearchActorActivity : Activity
+    [Activity(Theme = "@style/AppTheme.NoActionBar")]
+    public class SearchActorActivity : AppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.SearchActor);
-            // Create your application here
+            //Thread.Sleep(5000);
+            //var toolbar = FindViewById<Toolbar>(Resource.Id.SearchActor);
+            //SetActionBar(toolbar);
+            Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
+            SetSupportActionBar(toolbar);
+        }
+
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            MenuInflater.Inflate(Resource.Menu.SearchActorToolbar, menu);
+            return true;
+        }
+
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            int id = item.ItemId;
+            if (id == Resource.Id.home)
+            {
+                var activity = new Intent(this, typeof(MainActivity));
+                StartActivity(activity);
+                return true;
+            }
+            else if (id == Resource.Id.back)
+            {
+                var activity = new Intent(this, typeof(MainActivity));
+                StartActivity(activity);
+                return true;
+            }
+
+            return base.OnOptionsItemSelected(item);
         }
     }
 }
