@@ -47,7 +47,7 @@ namespace movieNight.Adapter
         {
             View view = convertView;
             if (view == null)
-                view = context.LayoutInflater.Inflate(Resource.Layout.SearchPeopleRow, null);
+                view = context.LayoutInflater.Inflate(Resource.Layout.SearchActorRow, null);
 
             ImageView Image = view.FindViewById<ImageView>(Resource.Id.ActorImage);
             Picasso.With(context).Load("https://image.tmdb.org/t/p/w500" + items[position].imageUrl).Into(Image);
