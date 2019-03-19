@@ -2444,8 +2444,8 @@ namespace movieNight
 			// aapt resource value: 0x7f08005c
 			public const int action_mode_close_button = 2131230812;
 			
-			// aapt resource value: 0x7f0800b9
-			public const int action_settings = 2131230905;
+			// aapt resource value: 0x7f0800ba
+			public const int action_settings = 2131230906;
 			
 			// aapt resource value: 0x7f0800a1
 			public const int action_text = 2131230881;
@@ -2456,8 +2456,8 @@ namespace movieNight
 			// aapt resource value: 0x7f08005d
 			public const int activity_chooser_view_content = 2131230813;
 			
-			// aapt resource value: 0x7f0800b5
-			public const int actor = 2131230901;
+			// aapt resource value: 0x7f0800b6
+			public const int actor = 2131230902;
 			
 			// aapt resource value: 0x7f080027
 			public const int add = 2131230759;
@@ -2471,8 +2471,8 @@ namespace movieNight
 			// aapt resource value: 0x7f080038
 			public const int always = 2131230776;
 			
-			// aapt resource value: 0x7f0800b7
-			public const int app = 2131230903;
+			// aapt resource value: 0x7f0800b8
+			public const int app = 2131230904;
 			
 			// aapt resource value: 0x7f080056
 			public const int async = 2131230806;
@@ -2480,8 +2480,8 @@ namespace movieNight
 			// aapt resource value: 0x7f080044
 			public const int auto = 2131230788;
 			
-			// aapt resource value: 0x7f0800b8
-			public const int back = 2131230904;
+			// aapt resource value: 0x7f0800b9
+			public const int back = 2131230905;
 			
 			// aapt resource value: 0x7f08002f
 			public const int beginning = 2131230767;
@@ -2597,8 +2597,8 @@ namespace movieNight
 			// aapt resource value: 0x7f080048
 			public const int fill_vertical = 2131230792;
 			
-			// aapt resource value: 0x7f0800b6
-			public const int film = 2131230902;
+			// aapt resource value: 0x7f0800b7
+			public const int film = 2131230903;
 			
 			// aapt resource value: 0x7f080054
 			public const int @fixed = 2131230804;
@@ -2657,14 +2657,14 @@ namespace movieNight
 			// aapt resource value: 0x7f080061
 			public const int list_item = 2131230817;
 			
-			// aapt resource value: 0x7f0800b4
-			public const int masked = 2131230900;
+			// aapt resource value: 0x7f0800b5
+			public const int masked = 2131230901;
 			
 			// aapt resource value: 0x7f0800a5
 			public const int media_actions = 2131230885;
 			
-			// aapt resource value: 0x7f0800b2
-			public const int message = 2131230898;
+			// aapt resource value: 0x7f0800b3
+			public const int message = 2131230899;
 			
 			// aapt resource value: 0x7f080031
 			public const int middle = 2131230769;
@@ -2755,6 +2755,9 @@ namespace movieNight
 			
 			// aapt resource value: 0x7f080055
 			public const int scrollable = 2131230805;
+			
+			// aapt resource value: 0x7f0800b2
+			public const int searchView1 = 2131230898;
 			
 			// aapt resource value: 0x7f080080
 			public const int search_badge = 2131230848;
@@ -2924,8 +2927,8 @@ namespace movieNight
 			// aapt resource value: 0x7f080016
 			public const int view_offset_helper = 2131230742;
 			
-			// aapt resource value: 0x7f0800b3
-			public const int visible = 2131230899;
+			// aapt resource value: 0x7f0800b4
+			public const int visible = 2131230900;
 			
 			// aapt resource value: 0x7f08003c
 			public const int withText = 2131230780;
