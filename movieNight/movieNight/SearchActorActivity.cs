@@ -14,12 +14,17 @@ using Android.Support.V4.View;
 using Android.Support.V4.Widget;
 using Android.Support.V7.App;
 using System.Threading;
+using movieNight.Adapter;
+using movieNight.GetData;
+using movieNight.Model;
 
 namespace movieNight
 {
     [Activity(Theme = "@style/AppTheme.NoActionBar")]
     public class SearchActorActivity : AppCompatActivity
     {
+        private List<PeopleDataModel> Actors;
+        private ListView List;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -28,9 +33,35 @@ namespace movieNight
             //var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
             //SetActionBar(toolbar);
             Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
+            List = FindViewById<ListView>(Resource.Id.PeopleView);
+            SearchView SearchView = FindViewById<SearchView>(Resource.Id.searchView1);
+
             SetSupportActionBar(toolbar);
 
-           // Android.Support.V7.Widget.SearchView search = FindViewById<Android.Support.V7.Widget.SearchView>(Resource.Id.searchView1);
+            SearchView.QueryTextSubmit += SearchView_QueryTextSubmit;
+            List.ItemClick += delegate (object sender, AdapterView.ItemClickEventArgs position)
+            {
+                var x = Actors.ElementAt(position.Position);
+                Intent intent = new Intent(this, typeof(MovieActivity));
+                intent.PutExtra("ActorId", x.id);
+                StartActivity(intent);
+            };
+            // Android.Support.V7.Widget.SearchView search = FindViewById<Android.Support.V7.Widget.SearchView>(Resource.Id.searchView1);
+        }
+
+        private void SearchView_QueryTextSubmit(object sender, SearchView.QueryTextSubmitEventArgs e)
+        {
+            SearchView SearchView = FindViewById<SearchView>(Resource.Id.searchView1);
+            GetActors(SearchView.Query);
+        }
+
+        private async void GetActors(string Query)
+        {
+            Actors = await GetPeople.GetPeopleDataTask(Query);
+            if (Actors != null)
+            {
+                List.Adapter = new ActorAdapter(this, Actors);
+            }
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
