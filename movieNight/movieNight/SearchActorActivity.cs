@@ -30,7 +30,7 @@ namespace movieNight
             Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
 
-            Android.Support.V7.Widget.SearchView search = FindViewById<Android.Support.V7.Widget.SearchView>(Resource.Id.searchView1);
+           // Android.Support.V7.Widget.SearchView search = FindViewById<Android.Support.V7.Widget.SearchView>(Resource.Id.searchView1);
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
@@ -41,19 +41,32 @@ namespace movieNight
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
-            int id = item.ItemId;
-            if (id == Resource.Id.home)
+            switch (item.ItemId)
             {
-                var activity = new Intent(this, typeof(MainActivity));
-                StartActivity(activity);
-                return true;
+                case Resource.Id.back:
+                    {
+                        var activity = new Intent(this, typeof(MainActivity));
+                        StartActivity(activity);
+                        break;
+                    }
+                default:
+                    {
+                        break;
+                    }
             }
-            else if (id == Resource.Id.back)
-            {
-                var activity = new Intent(this, typeof(MainActivity));
-                StartActivity(activity);
-                return true;
-            }
+            //int id = item.ItemId;
+            //if (id == Resource.Id.home)
+            //{
+            //    var activity = new Intent(this, typeof(MainActivity));
+            //    StartActivity(activity);
+            //    return true;
+            //}
+            //else if (id == Resource.Id.back)
+            //{
+            //    var activity = new Intent(this, typeof(MainActivity));
+            //    StartActivity(activity);
+            //    return true;
+            //}
 
             return base.OnOptionsItemSelected(item);
         }
