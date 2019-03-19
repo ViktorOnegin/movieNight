@@ -30,7 +30,7 @@ namespace movieNight
             Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
 
-           // Android.Support.V7.Widget.SearchView search = FindViewById<Android.Support.V7.Widget.SearchView>(Resource.Id.searchView1);
+            //Android.Support.V7.Widget.SearchView search = FindViewById<Android.Support.V7.Widget.SearchView>(Resource.Id.PeopleView);            
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
