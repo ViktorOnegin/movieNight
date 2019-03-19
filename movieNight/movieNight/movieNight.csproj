@@ -57,10 +57,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActorBioActivity.cs" />
+    <Compile Include="Adapter\ActorAdapter.cs" />
+    <Compile Include="Adapter\MovieAdapter.cs" />
+    <Compile Include="GetData\GetMovies.cs" />
+    <Compile Include="GetData\GetPeople.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="Model\MovieDataModel.cs" />
+    <Compile Include="Model\PeopleDataModel.cs" />
+    <Compile Include="MovieActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SearchActorActivity.cs" />
+    <Compile Include="Services\DataService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -115,6 +123,18 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_round.png" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp">
+      <Version>4.5.0</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Square.Picasso">
+      <Version>2.5.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="System.Net.Http">
+      <Version>4.3.4</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Android.Support.Design" Version="27.0.2.1" />
   </ItemGroup>
   <ItemGroup>
@@ -220,6 +240,7 @@
   <ItemGroup>
     <AndroidResource Include="Resources\mipmap-xxxhdpi\baseline_back_24.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
     Other similar extension points exist, see Microsoft.Common.targets.
