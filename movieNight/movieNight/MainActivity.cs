@@ -12,7 +12,7 @@ using Android.Views;
 
 namespace movieNight
 {
-    [Activity(Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
+    [Activity(Theme = "@style/AppTheme.NoActionBar")]
     public class MainActivity : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
     {
         protected override void OnCreate(Bundle savedInstanceState)
