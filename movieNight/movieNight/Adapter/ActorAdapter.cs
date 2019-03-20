@@ -50,7 +50,11 @@ namespace movieNight.Adapter
                 view = context.LayoutInflater.Inflate(Resource.Layout.SearchActorRow, null);
 
             ImageView Image = view.FindViewById<ImageView>(Resource.Id.ActorImage);
-            Picasso.With(context).Load("https://image.tmdb.org/t/p/w500" + items[position].imageUrl).Into(Image);
+            Image.SetImageResource(Resource.Drawable.UnknownPerson);
+            if (items[position].imageUrl != null)
+            {
+                Picasso.With(context).Load("https://image.tmdb.org/t/p/w500" + items[position].imageUrl).Into(Image);
+            }
             view.FindViewById<TextView>(Resource.Id.PersonName).Text = items[position].name;
             return view;
         }       

@@ -57,7 +57,7 @@ namespace movieNight
 
         private async void GetActors(string Query)
         {
-            Actors = await GetPeople.GetPeopleDataTask(Query);
+            Actors = await GetPeople.GetPeopleDataTask(Query.ToString());
             if (Actors != null)
             {
                 List.Adapter = new ActorAdapter(this, Actors);
