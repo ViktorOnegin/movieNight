@@ -23,6 +23,7 @@ namespace movieNight
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            SetContentView(Resource.Layout.GetMovies);
             List = FindViewById<ListView>(Resource.Id.MovieView);
 
             ActorId = Intent.GetIntExtra("ActorId", 0);
