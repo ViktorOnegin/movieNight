@@ -2248,26 +2248,26 @@ namespace movieNight
 			// aapt resource value: 0x7f020053
 			public const int avd_hide_password = 2130837587;
 			
-			// aapt resource value: 0x7f020077
-			public const int avd_hide_password_1 = 2130837623;
+			// aapt resource value: 0x7f02007a
+			public const int avd_hide_password_1 = 2130837626;
 			
-			// aapt resource value: 0x7f020078
-			public const int avd_hide_password_2 = 2130837624;
+			// aapt resource value: 0x7f02007b
+			public const int avd_hide_password_2 = 2130837627;
 			
-			// aapt resource value: 0x7f020079
-			public const int avd_hide_password_3 = 2130837625;
+			// aapt resource value: 0x7f02007c
+			public const int avd_hide_password_3 = 2130837628;
 			
 			// aapt resource value: 0x7f020054
 			public const int avd_show_password = 2130837588;
 			
-			// aapt resource value: 0x7f02007a
-			public const int avd_show_password_1 = 2130837626;
+			// aapt resource value: 0x7f02007d
+			public const int avd_show_password_1 = 2130837629;
 			
-			// aapt resource value: 0x7f02007b
-			public const int avd_show_password_2 = 2130837627;
+			// aapt resource value: 0x7f02007e
+			public const int avd_show_password_2 = 2130837630;
 			
-			// aapt resource value: 0x7f02007c
-			public const int avd_show_password_3 = 2130837628;
+			// aapt resource value: 0x7f02007f
+			public const int avd_show_password_3 = 2130837631;
 			
 			// aapt resource value: 0x7f020055
 			public const int baseline_back_24 = 2130837589;
@@ -2347,11 +2347,11 @@ namespace movieNight
 			// aapt resource value: 0x7f02006e
 			public const int notification_icon_background = 2130837614;
 			
-			// aapt resource value: 0x7f020075
-			public const int notification_template_icon_bg = 2130837621;
+			// aapt resource value: 0x7f020078
+			public const int notification_template_icon_bg = 2130837624;
 			
-			// aapt resource value: 0x7f020076
-			public const int notification_template_icon_low_bg = 2130837622;
+			// aapt resource value: 0x7f020079
+			public const int notification_template_icon_low_bg = 2130837625;
 			
 			// aapt resource value: 0x7f02006f
 			public const int notification_tile_bg = 2130837615;
@@ -2374,8 +2374,11 @@ namespace movieNight
 			// aapt resource value: 0x7f020075
 			public const int tooltip_frame_light = 2130837621;
 			
-			// aapt resource value: 0x7f020074
-			public const int UnknownPerson = 2130837620;
+			// aapt resource value: 0x7f020076
+			public const int UnknownPerson = 2130837622;
+			
+			// aapt resource value: 0x7f020077
+			public const int unknownperson2 = 2130837623;
 			
 			static Drawable()
 			{
@@ -2393,8 +2396,11 @@ namespace movieNight
 			// aapt resource value: 0x7f080032
 			public const int ALT = 2131230770;
 			
-			// aapt resource value: 0x7f0800b7
-			public const int ActorImage = 2131230903;
+			// aapt resource value: 0x7f0800a2
+			public const int AboutMovie = 2131230882;
+			
+			// aapt resource value: 0x7f0800ba
+			public const int ActorImage = 2131230906;
 			
 			// aapt resource value: 0x7f080033
 			public const int CTRL = 2131230771;
@@ -2411,11 +2417,14 @@ namespace movieNight
 			// aapt resource value: 0x7f08009c
 			public const int MovieView = 2131230876;
 			
-			// aapt resource value: 0x7f0800b6
-			public const int PeopleView = 2131230902;
+			// aapt resource value: 0x7f0800a1
+			public const int MovieYear = 2131230881;
 			
-			// aapt resource value: 0x7f0800b8
-			public const int PersonName = 2131230904;
+			// aapt resource value: 0x7f0800b9
+			public const int PeopleView = 2131230905;
+			
+			// aapt resource value: 0x7f0800bb
+			public const int PersonName = 2131230907;
 			
 			// aapt resource value: 0x7f08009e
 			public const int PosterView = 2131230878;
@@ -2486,8 +2495,8 @@ namespace movieNight
 			// aapt resource value: 0x7f08005d
 			public const int activity_chooser_view_content = 2131230813;
 			
-			// aapt resource value: 0x7f0800bc
-			public const int actor = 2131230908;
+			// aapt resource value: 0x7f0800bf
+			public const int actor = 2131230911;
 			
 			// aapt resource value: 0x7f080027
 			public const int add = 2131230759;
@@ -2501,8 +2510,8 @@ namespace movieNight
 			// aapt resource value: 0x7f080038
 			public const int always = 2131230776;
 			
-			// aapt resource value: 0x7f0800be
-			public const int app = 2131230910;
+			// aapt resource value: 0x7f0800c1
+			public const int app = 2131230913;
 			
 			// aapt resource value: 0x7f080056
 			public const int async = 2131230806;
@@ -2510,8 +2519,8 @@ namespace movieNight
 			// aapt resource value: 0x7f080044
 			public const int auto = 2131230788;
 			
-			// aapt resource value: 0x7f0800bf
-			public const int back = 2131230911;
+			// aapt resource value: 0x7f0800c2
+			public const int back = 2131230914;
 			
 			// aapt resource value: 0x7f08002f
 			public const int beginning = 2131230767;
@@ -2627,8 +2636,8 @@ namespace movieNight
 			// aapt resource value: 0x7f080048
 			public const int fill_vertical = 2131230792;
 			
-			// aapt resource value: 0x7f0800bd
-			public const int film = 2131230909;
+			// aapt resource value: 0x7f0800c0
+			public const int film = 2131230912;
 			
 			// aapt resource value: 0x7f080054
 			public const int @fixed = 2131230804;
@@ -2690,14 +2699,14 @@ namespace movieNight
 			// aapt resource value: 0x7f080061
 			public const int list_item = 2131230817;
 			
-			// aapt resource value: 0x7f0800bb
-			public const int masked = 2131230907;
+			// aapt resource value: 0x7f0800be
+			public const int masked = 2131230910;
 			
 			// aapt resource value: 0x7f0800ab
 			public const int media_actions = 2131230891;
 			
-			// aapt resource value: 0x7f0800b9
-			public const int message = 2131230905;
+			// aapt resource value: 0x7f0800bc
+			public const int message = 2131230908;
 			
 			// aapt resource value: 0x7f080031
 			public const int middle = 2131230769;
@@ -2960,8 +2969,8 @@ namespace movieNight
 			// aapt resource value: 0x7f080016
 			public const int view_offset_helper = 2131230742;
 			
-			// aapt resource value: 0x7f0800ba
-			public const int visible = 2131230906;
+			// aapt resource value: 0x7f0800bd
+			public const int visible = 2131230909;
 			
 			// aapt resource value: 0x7f08003c
 			public const int withText = 2131230780;
