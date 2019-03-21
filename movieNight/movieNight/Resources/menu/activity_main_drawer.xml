@@ -9,7 +9,7 @@
           android:title="Search by actor name" />
       <item
           android:id="@+id/film"
-          android:title="Search by film name (BETA)" />
+          android:title="Search by film name" />
     </group>
 
   <item android:title="info">

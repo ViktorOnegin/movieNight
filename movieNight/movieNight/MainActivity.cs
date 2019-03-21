@@ -9,10 +9,11 @@ using Android.Support.V4.View;
 using Android.Support.V4.Widget;
 using Android.Support.V7.App;
 using Android.Views;
+using Android.Widget;
 
 namespace movieNight
 {
-    [Activity(Theme = "@style/AppTheme.NoActionBar")]
+    [Activity(Theme = "@style/AppTheme.NoActionBar", Label="")]
     public class MainActivity : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -56,11 +57,13 @@ namespace movieNight
             }
             else if (id == Resource.Id.film)
             {
-
+                Toast.MakeText(this, "Ei ole tehtud veel",
+               ToastLength.Short).Show();
             }
             else if (id == Resource.Id.app)
             {
-
+                Toast.MakeText(this, "Ei ole tehtud veel",
+               ToastLength.Short).Show();
             }
 
             DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);

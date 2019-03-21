@@ -42,7 +42,7 @@ namespace movieNight.Adapter
             string overview;
             if(items[position].overview.Length <= 210)
             {
-                var remainingString = 200 - items[position].overview.Length;
+                var remainingString = 210 - items[position].overview.Length;
                 var repeatString = new String(' ', remainingString);
                 overview = items[position].overview + repeatString;
             }
