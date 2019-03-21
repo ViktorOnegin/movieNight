@@ -62,8 +62,10 @@ namespace movieNight
             }
             else if (id == Resource.Id.app)
             {
-                Toast.MakeText(this, "Ei ole tehtud veel",
-               ToastLength.Short).Show();
+                var activity = new Intent(this, typeof(AboutApp));
+                StartActivity(activity);
+                // Toast.MakeText(this, "Ei ole tehtud veel",
+                //ToastLength.Short).Show();
             }
 
             DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
