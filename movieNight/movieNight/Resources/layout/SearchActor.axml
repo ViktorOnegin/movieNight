@@ -12,10 +12,11 @@
 		android:minWidth="25px"
 		android:minHeight="25px"
 		android:background="#7c0909"
-		android:textColor="#ffffff"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:id="@+id/searchView1" />
+		android:id="@+id/searchView1"
+		android:queryHint="Type your author here"
+		android:iconifiedByDefault="false" />
 	<ListView
 		android:minWidth="25px"
 		android:minHeight="25px"
