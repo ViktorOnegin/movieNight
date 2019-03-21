@@ -17,7 +17,7 @@ namespace movieNight.GetData
 {
     public class GetMovies
     {
-        public static async Task<List<MovieDataModel>> GetMovieDataTask(int id)
+        public static async Task<List<MovieDataModel>> GetMovieDataTask(int id, Context content)
         {
             string key = "ed47b05cca6dc603460f42899bea7008";
             string url = "https://api.themoviedb.org/3/person/" + id + "/movie_credits?api_key=" + key + "&language=en-US";

@@ -10,6 +10,9 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using System.Threading.Tasks;
+using movieNight.GetData;
+using movieNight.Model;
+using Context = System.Runtime.Remoting.Contexts.Context;
 
 namespace movieNight
 {
@@ -31,10 +34,9 @@ namespace movieNight
 
         async void SimulateStartup()
         {
+            List<PeopleDataModel> People = await GetPeople.GetPeopleDataTask("Kaspar");
             Intent intent = new Intent(Application.Context, typeof(MainActivity));
             StartActivity(intent);
-            await Task.Delay(3000);
-
         }
     }
 }
