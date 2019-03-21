@@ -69,6 +69,7 @@
     <Compile Include="Adapter\MovieAdapter.cs" />
     <Compile Include="GetData\GetMovies.cs" />
     <Compile Include="GetData\GetPeople.cs" />
+    <Compile Include="GetData\GetPopular.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Model\MovieDataModel.cs" />
     <Compile Include="Model\PeopleDataModel.cs" />
@@ -281,6 +282,9 @@
     <AndroidResource Include="Resources\layout\AboutApp.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\BorderText.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

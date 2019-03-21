@@ -8,10 +8,40 @@
 	android:layout_height="match_parent"                          
 	android:fitsSystemWindows="true"                         
     tools:openDrawer="start">
+	<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:minWidth="25px"
+	android:minHeight="25px">	
+	<TextView
+		android:text="Popular This Week!"
+		android:textStyle="bold"
+		android:textAlignment="center"
+		android:layout_marginTop="50dp"
+		android:background="@drawable/BorderText"
+			android:paddingTop="5dp"				
+			android:paddingBottom="5dp"
+		android:textSize="25dp"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/textView4" />
+	<ListView
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:id="@+id/PopularListView"/>
+</LinearLayout>
+
   <include
     layout="@layout/app_bar_main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" />
+    android:layout_height="match_parent"/>
+	
   <android.support.design.widget.NavigationView
     android:id="@+id/nav_view"
 		android:background="#bababa"
@@ -20,5 +50,7 @@
     android:layout_gravity="start"
     android:fitsSystemWindows="true"
     app:headerLayout="@layout/nav_header_main"
-    app:menu="@menu/activity_main_drawer" />
+    app:menu="@menu/activity_main_drawer">		
+  </android.support.design.widget.NavigationView>
+	
 </android.support.v4.widget.DrawerLayout>

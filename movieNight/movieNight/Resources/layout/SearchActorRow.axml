@@ -14,7 +14,8 @@
 		<ImageView
 			android:src="@android:drawable/ic_menu_gallery"
 			android:layout_width="100.0dp"
-			android:layout_height="100dp"
+			android:layout_height="150dp"
+			android:layout_marginRight="10dp"
 			android:id="@+id/ActorImage" />
 		<TextView
 			android:text="Text"

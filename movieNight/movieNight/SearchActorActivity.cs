@@ -20,7 +20,7 @@ using movieNight.Model;
 
 namespace movieNight
 {
-    [Activity(Theme = "@style/AppTheme.NoActionBar")]
+    [Activity(Theme = "@style/AppTheme")]
     public class SearchActorActivity : AppCompatActivity
     {
         private List<PeopleDataModel> Actors;
@@ -36,7 +36,7 @@ namespace movieNight
             List = FindViewById<ListView>(Resource.Id.PeopleView);
             SearchView SearchView = FindViewById<SearchView>(Resource.Id.searchView1);
 
-            SetSupportActionBar(toolbar);
+            //SetSupportActionBar(toolbar);
 
             SearchView.QueryTextSubmit += SearchView_QueryTextSubmit;
             List.ItemClick += delegate (object sender, AdapterView.ItemClickEventArgs position)

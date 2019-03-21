@@ -13,12 +13,15 @@ using System.Threading.Tasks;
 using movieNight.GetData;
 using movieNight.Model;
 using Context = System.Runtime.Remoting.Contexts.Context;
+using Newtonsoft.Json;
+using Java.IO;
 
 namespace movieNight
 {
     [Activity(Theme = "@style/MyTheme.Splash", MainLauncher = true, NoHistory = true, Icon = "@drawable/movieIcon")]
     public class SplashActivity : AppCompatActivity
     {
+        public static List<MovieDataModel> Popular;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -34,7 +37,7 @@ namespace movieNight
 
         async void SimulateStartup()
         {
-            List<PeopleDataModel> People = await GetPeople.GetPeopleDataTask("Kaspar");
+            Popular = await GetPopular.GetPopularDataTask();
             Intent intent = new Intent(Application.Context, typeof(MainActivity));
             StartActivity(intent);
         }
