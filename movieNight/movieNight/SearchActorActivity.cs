@@ -20,7 +20,7 @@ using movieNight.Model;
 
 namespace movieNight
 {
-    [Activity(Theme = "@style/AppTheme")]
+    [Activity(Theme = "@style/AppTheme", Label ="")]
     public class SearchActorActivity : AppCompatActivity
     {
         private List<PeopleDataModel> Actors;

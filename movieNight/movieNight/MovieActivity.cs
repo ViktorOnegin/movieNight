@@ -15,7 +15,7 @@ using movieNight.Model;
 
 namespace movieNight
 {
-    [Activity(Label = "MovieActivity")]
+    [Activity(Label = "")]
     public class MovieActivity : Activity
     {
         private ListView List;
