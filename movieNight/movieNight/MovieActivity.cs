@@ -18,6 +18,7 @@ namespace movieNight
     [Activity(Label = "")]
     public class MovieActivity : Activity
     {
+        private List<MovieDataModel> Movies;
         private ListView List;
         private int ActorId;
         protected override void OnCreate(Bundle savedInstanceState)
@@ -28,11 +29,18 @@ namespace movieNight
 
             ActorId = Intent.GetIntExtra("ActorId", 0);
             GetMoviesAsync(ActorId);
+            List.ItemClick += delegate (object sender, AdapterView.ItemClickEventArgs position)
+            {
+                var movie = Movies.ElementAt(position.Position);
+                Intent intent = new Intent(this, typeof(MovieDetailActivity));
+                intent.PutExtra("MovieId", movie.id);
+                StartActivity(intent);
+            };
         }
 
         private async void GetMoviesAsync(int id)
         {
-            List<MovieDataModel> Movies = await GetMovies.GetMovieDataTask(ActorId, this);
+            Movies = await GetMovies.GetMovieDataTask(ActorId, this);
             if (Movies != null)
             {
                 List.Adapter = new MovieAdapter(this, Movies);
