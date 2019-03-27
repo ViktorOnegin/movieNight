@@ -66,6 +66,7 @@
     <Compile Include="AboutApp.cs" />
     <Compile Include="Adapter\ActorAdapter.cs" />
     <Compile Include="Adapter\MovieAdapter.cs" />
+    <Compile Include="ExceptionActivity.cs" />
     <Compile Include="GetData\GetMovies.cs" />
     <Compile Include="GetData\GetPeople.cs" />
     <Compile Include="GetData\GetPopular.cs" />
@@ -298,6 +299,17 @@
       <Generator>MSBuild:UpdateGeneratedFiles</Generator>
       <SubType>Designer</SubType>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\ExceptionLayout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\NoInternet.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ErrorImage.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
