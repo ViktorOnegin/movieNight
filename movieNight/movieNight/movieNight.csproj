@@ -66,7 +66,6 @@
     <Compile Include="AboutApp.cs" />
     <Compile Include="Adapter\ActorAdapter.cs" />
     <Compile Include="Adapter\MovieAdapter.cs" />
-    <Compile Include="GetData\GetMovieDetails.cs" />
     <Compile Include="GetData\GetMovies.cs" />
     <Compile Include="GetData\GetPeople.cs" />
     <Compile Include="GetData\GetPopular.cs" />
@@ -79,6 +78,7 @@
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SearchActorActivity.cs" />
+    <Compile Include="SearchMovieActivity.cs" />
     <Compile Include="Services\DataService.cs" />
     <Compile Include="SplashActivity.cs" />
   </ItemGroup>
@@ -290,6 +290,12 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\MovieDetails.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\SearchMovie.axml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

@@ -2405,8 +2405,8 @@ namespace movieNight
 			// aapt resource value: 0x7f0800a9
 			public const int AboutMovie = 2131230889;
 			
-			// aapt resource value: 0x7f0800c1
-			public const int ActorImage = 2131230913;
+			// aapt resource value: 0x7f0800c0
+			public const int ActorImage = 2131230912;
 			
 			// aapt resource value: 0x7f0800aa
 			public const int Backdrop = 2131230890;
@@ -2429,11 +2429,11 @@ namespace movieNight
 			// aapt resource value: 0x7f0800a8
 			public const int MovieYear = 2131230888;
 			
-			// aapt resource value: 0x7f0800c0
-			public const int PeopleView = 2131230912;
-			
 			// aapt resource value: 0x7f0800c2
-			public const int PersonName = 2131230914;
+			public const int PeopleView = 2131230914;
+			
+			// aapt resource value: 0x7f0800c1
+			public const int PersonName = 2131230913;
 			
 			// aapt resource value: 0x7f080094
 			public const int PopularListView = 2131230868;
@@ -3260,19 +3260,22 @@ namespace movieNight
 			public const int SearchActorRow = 2130968641;
 			
 			// aapt resource value: 0x7f040042
-			public const int select_dialog_item_material = 2130968642;
+			public const int SearchMovie = 2130968642;
 			
 			// aapt resource value: 0x7f040043
-			public const int select_dialog_multichoice_material = 2130968643;
+			public const int select_dialog_item_material = 2130968643;
 			
 			// aapt resource value: 0x7f040044
-			public const int select_dialog_singlechoice_material = 2130968644;
+			public const int select_dialog_multichoice_material = 2130968644;
 			
 			// aapt resource value: 0x7f040045
-			public const int support_simple_spinner_dropdown_item = 2130968645;
+			public const int select_dialog_singlechoice_material = 2130968645;
 			
 			// aapt resource value: 0x7f040046
-			public const int tooltip = 2130968646;
+			public const int support_simple_spinner_dropdown_item = 2130968646;
+			
+			// aapt resource value: 0x7f040047
+			public const int tooltip = 2130968647;
 			
 			static Layout()
 			{

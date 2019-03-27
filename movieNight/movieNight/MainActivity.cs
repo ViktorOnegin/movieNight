@@ -72,8 +72,8 @@ namespace movieNight
             }
             else if (id == Resource.Id.film)
             {
-                Toast.MakeText(this, "Ei ole tehtud veel",
-                    ToastLength.Short).Show();
+                var activity = new Intent(this, typeof(SearchMovieActivity));
+                StartActivity(activity);
             }
             else if (id == Resource.Id.app)
             {

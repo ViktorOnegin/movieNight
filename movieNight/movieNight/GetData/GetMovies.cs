@@ -17,7 +17,7 @@ namespace movieNight.GetData
 {
     public class GetMovies
     {
-        public static async Task<List<MovieDataModel>> GetMovieDataTask(int id, Context content)
+        public static async Task<List<MovieDataModel>> GetMovieByIdDataTask(int id, Context content)
         {
             string key = "ed47b05cca6dc603460f42899bea7008";
             string url = "https://api.themoviedb.org/3/person/" + id + "/movie_credits?api_key=" + key + "&language=en-US";
@@ -44,6 +44,58 @@ namespace movieNight.GetData
                 Movies.Add(data);
             }
 
+            return Movies;
+        }
+
+        public static async Task<MovieDetailsDataModel> GetMovieDetailsDataTask(int id)
+        {
+            string key = "ed47b05cca6dc603460f42899bea7008";
+            string url = "https://api.themoviedb.org/3/movie/" + id + "?api_key=" + key + "&language=en-US";
+
+            dynamic results = await DataService.GetDataFromService(url).ConfigureAwait(false);
+
+
+            MovieDetailsDataModel MovieDetails = new MovieDetailsDataModel();
+            MovieDetails = new MovieDetailsDataModel
+            {
+                adult = (bool)results["adult"],
+                backdrop_path = (string)results["backdrop_path"],
+                budget = (int)results["budget"],
+                id = (int)results["id"],
+                title = (string)results["title"],
+                overview = (string)results["overview"],
+                poster_path = (string)results["poster_path"],
+                release_date = (string)results["release_date"],
+                revenue = (int)results["revenue"],
+                tagline = (string)results["tagline"],
+                runtime = (int)results["runtime"]
+            };
+
+            return MovieDetails;
+        }
+
+        public static async Task<List<MovieDataModel>>GetMoviesDataTask(string query)
+        {
+            string key = "ed47b05cca6dc603460f42899bea7008";
+            string url = "https://api.themoviedb.org/3/search/movie?api_key=" + key + "&query=" + query;
+            int NumberOfResults;
+
+            dynamic results = await DataService.GetDataFromService(url).ConfigureAwait(false);
+            NumberOfResults = ((JArray)results["results"]).Count;
+
+            List<MovieDataModel> Movies = new List<MovieDataModel>();
+            for (int i = 0; i < NumberOfResults; i++)
+            {
+                var data = new MovieDataModel()
+                {
+                    title = (string)results["results"][i]["title"],
+                    posterUrl = (string)results["results"][i]["poster_path"],
+                    overview = (string)results["results"][i]["overview"],
+                    releaseDate = (string)results["results"][i]["overview"],
+                    id = (int)results["results"][i]["id"]
+                };
+                Movies.Add(data);
+            }
             return Movies;
         }
     }

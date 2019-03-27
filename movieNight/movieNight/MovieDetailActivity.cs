@@ -33,7 +33,7 @@ namespace movieNight
 
         private async void GetMovieDetailsAsync(int movieId)
         {
-            MovieDetails = await GetMovieDetails.GetMovieDetailsDataTask(movieId);
+            MovieDetails = await GetMovies.GetMovieDetailsDataTask(movieId);
 
             FindViewById<TextView>(Resource.Id.MovieName).Text = MovieDetails.title;
             FindViewById<TextView>(Resource.Id.MovieYear).Text = MovieDetails.release_date;

@@ -40,7 +40,7 @@ namespace movieNight
 
         private async void GetMoviesAsync(int id)
         {
-            Movies = await GetMovies.GetMovieDataTask(ActorId, this);
+            Movies = await GetMovies.GetMovieByIdDataTask(ActorId, this);
             if (Movies != null)
             {
                 List.Adapter = new MovieAdapter(this, Movies);
