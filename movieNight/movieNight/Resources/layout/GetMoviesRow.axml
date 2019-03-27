@@ -7,7 +7,7 @@
 		android:orientation="horizontal"
 		android:minWidth="25px"
 		android:minHeight="25px"
-		android:background="#bababa"
+		android:background="#ffffff"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:id="@+id/linearLayout1" >
