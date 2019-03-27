@@ -55,7 +55,7 @@ namespace movieNight.Adapter
                 overview = "Overview";
             }
             view.FindViewById<TextView>(Resource.Id.MovieName).Text = items[position].title;
-            view.FindViewById<TextView>(Resource.Id.MovieYear).Text = rnd.Next(0, 30) + "." + rnd.Next(0,12) + "." + rnd.Next(1995,2019);
+            view.FindViewById<TextView>(Resource.Id.MovieYear).Text = items[position].releaseDate;
             view.FindViewById<TextView>(Resource.Id.AboutMovie).Text = overview;
             
             ImageView Image = view.FindViewById<ImageView>(Resource.Id.PosterView);
