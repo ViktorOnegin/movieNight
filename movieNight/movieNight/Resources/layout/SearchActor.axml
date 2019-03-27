@@ -15,7 +15,7 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:id="@+id/searchView1"
-		android:queryHint="Insert Movie's Title"
+		android:queryHint="Insert Actor's name"
 		android:iconifiedByDefault="false" />
 	<ListView
 		android:minWidth="25px"

@@ -25,7 +25,6 @@ namespace movieNight
             {
                 errorMessage = Intent.Extras.GetString("ExceptionMessage");
             }
-            errorMessage = "";
             
             switch (errorMessage.ToString())
             {

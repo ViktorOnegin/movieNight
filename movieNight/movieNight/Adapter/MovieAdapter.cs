@@ -40,19 +40,18 @@ namespace movieNight.Adapter
                 view = context.LayoutInflater.Inflate(Resource.Layout.GetMoviesRow, null);
             Random rnd = new Random();
             string overview;
-            if(items[position].overview.Length <= 210)
+            if (items[position].overview.Split(". ").Count() > 1)
             {
-                var remainingString = 210 - items[position].overview.Length;
-                var repeatString = new String(' ', remainingString);
-                overview = items[position].overview + repeatString;
+                var sentances = items[position].overview.Split(". ");
+                overview = sentances[0].ToString().TrimEnd() + "...";
             }
-            else if (items[position].overview.Length > 210)
+            else if (items[position].overview.Split(". ").Count() >= 1)
             {
-                overview = items[position].overview.Substring(0, 210) + "...";
+                overview = items[position].overview;
             }
             else
             {
-                overview = "Overview";
+                overview = "Overview is not avaliable";
             }
             view.FindViewById<TextView>(Resource.Id.MovieName).Text = items[position].title;
             view.FindViewById<TextView>(Resource.Id.MovieYear).Text = items[position].releaseDate;

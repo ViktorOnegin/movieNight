@@ -95,7 +95,7 @@
 					android:layout_marginLeft="10dp"
 					android:layout_width="wrap_content"
 					android:layout_height="match_parent"
-					android:id="@+id/textView4" />
+					android:id="@+id/RuntimeView" />
 			</LinearLayout>
 			<LinearLayout
 				android:orientation="horizontal"
@@ -124,7 +124,7 @@
 				android:layout_height="wrap_content"
 				android:id="@+id/linearLayout5">
 				<TextView
-					android:text="Revenu"
+					android:text="revenue"
 					android:textStyle="bold"
 					android:textColor="#7c0909"
 					android:textSize="15dp"
@@ -149,7 +149,7 @@
 					android:layout_marginLeft="10dp"
 					android:layout_width="wrap_content"
 					android:layout_height="match_parent"
-					android:id="@+id/textView5" />
+					android:id="@+id/RevenueView" />
 			</LinearLayout>
 			<LinearLayout
 				android:orientation="horizontal"
@@ -257,7 +257,7 @@
 					android:layout_marginLeft="10dp"
 					android:layout_width="wrap_content"
 					android:layout_height="match_parent"
-					android:id="@+id/textView5" />
+					android:id="@+id/StatusView" />
 			</LinearLayout>
 			<LinearLayout
 				android:orientation="horizontal"
