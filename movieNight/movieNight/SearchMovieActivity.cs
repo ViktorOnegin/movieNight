@@ -29,6 +29,13 @@ namespace movieNight
             SearchView SearchView = FindViewById<SearchView>(Resource.Id.searchView1);
 
             SearchView.QueryTextSubmit += SearchView_QueryTextSubmit;
+            List.ItemClick += delegate (object sender, AdapterView.ItemClickEventArgs position)
+            {
+                var movie = Movies.ElementAt(position.Position);
+                Intent intent = new Intent(this, typeof(MovieDetailActivity));
+                intent.PutExtra("MovieId", movie.id);
+                StartActivity(intent);
+            };
         }
 
         private void SearchView_QueryTextSubmit(object sender, SearchView.QueryTextSubmitEventArgs e)

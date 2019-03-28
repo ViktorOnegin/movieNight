@@ -38,8 +38,8 @@ namespace movieNight
             FindViewById<TextView>(Resource.Id.MovieName).Text = MovieDetails.title;
             FindViewById<TextView>(Resource.Id.MovieYear).Text = MovieDetails.release_date;
             FindViewById<TextView>(Resource.Id.AboutMovie).Text = MovieDetails.overview;
-            FindViewById<TextView>(Resource.Id.RuntimeView).Text = MovieDetails.runtime.ToString();
-            FindViewById<TextView>(Resource.Id.RevenueView).Text = MovieDetails.revenue.ToString();
+            FindViewById<TextView>(Resource.Id.RuntimeView).Text = MovieDetails.runtime.ToString() + "min";
+            FindViewById<TextView>(Resource.Id.RevenueView).Text = "$" + MovieDetails.revenue.ToString();
 
             ImageView Image = FindViewById<ImageView>(Resource.Id.Backdrop);
             Picasso.With(this).Load("https://image.tmdb.org/t/p/original" + MovieDetails.backdrop_path).Into(Image);

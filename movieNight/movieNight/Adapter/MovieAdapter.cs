@@ -40,12 +40,12 @@ namespace movieNight.Adapter
                 view = context.LayoutInflater.Inflate(Resource.Layout.GetMoviesRow, null);
             Random rnd = new Random();
             string overview;
-            if (items[position].overview.Split(". ").Count() > 1)
+            if (items[position].overview.Split('.').Count() > 1)
             {
-                var sentances = items[position].overview.Split(". ");
+                var sentances = items[position].overview.Split('.');
                 overview = sentances[0].ToString().TrimEnd() + "...";
             }
-            else if (items[position].overview.Split(". ").Count() >= 1)
+            else if (items[position].overview.ToString().Split('.').Length == 1)
             {
                 overview = items[position].overview;
             }

@@ -95,7 +95,7 @@
 					android:layout_marginLeft="10dp"
 					android:layout_width="wrap_content"
 					android:layout_height="match_parent"
-					android:id="@+id/RuntimeView" />
+					android:id="@+id/RuntimeLabel" />
 			</LinearLayout>
 			<LinearLayout
 				android:orientation="horizontal"
@@ -113,7 +113,7 @@
 					android:layout_marginLeft="10dp"
 					android:layout_width="wrap_content"
 					android:layout_height="match_parent"
-					android:id="@+id/textView5" />
+					android:id="@+id/RuntimeView" />
 			</LinearLayout>
 			<LinearLayout
 				android:orientation="horizontal"
@@ -178,7 +178,7 @@
 				android:layout_height="wrap_content"
 				android:id="@+id/linearLayout6">
 				<TextView
-					android:text="US"
+					android:text="Not Available"
 					android:textStyle="bold"
 					android:textColor="#000000"
 					android:textSize="20dp"
@@ -214,7 +214,7 @@
 				android:layout_height="wrap_content"
 				android:id="@+id/linearLayout6">
 				<TextView
-					android:text="Drama"
+					android:text="Not Available"
 					android:textStyle="bold"
 					android:textColor="#000000"
 					android:textSize="20dp"
@@ -250,7 +250,7 @@
 				android:layout_height="wrap_content"
 				android:id="@+id/linearLayout6">
 				<TextView
-					android:text="released"
+					android:text="Not Available"
 					android:textStyle="bold"
 					android:textColor="#000000"
 					android:textSize="20dp"

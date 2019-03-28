@@ -18,7 +18,7 @@ using Java.IO;
 
 namespace movieNight
 {
-    [Activity(Theme = "@style/MyTheme.Splash", MainLauncher = true, NoHistory = true, Icon = "@drawable/movieIcon")]
+    [Activity(Theme = "@style/MyTheme.Splash", MainLauncher = true, NoHistory = true, Icon = "@drawable/AppIcon")]
     public class SplashActivity : AppCompatActivity
     {
         private string exception;

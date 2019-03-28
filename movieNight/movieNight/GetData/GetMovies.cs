@@ -59,16 +59,16 @@ namespace movieNight.GetData
             MovieDetails = new MovieDetailsDataModel
             {
                 adult = (bool)results["adult"],
-                backdrop_path = (string)results["backdrop_path"],
+                backdrop_path = string.IsNullOrEmpty((string)results["backdrop_path"]) ? "0" : (string)results["backdrop_path"],
                 budget = (int)results["budget"],
                 id = (int)results["id"],
                 title = (string)results["title"],
                 overview = (string)results["overview"],
-                poster_path = (string)results["poster_path"],
+                poster_path = string.IsNullOrEmpty((string)results["poster_path"]) ? "0" : (string)results["poster_path"],
                 release_date = (string)results["release_date"],
                 revenue = (int)results["revenue"],
-                tagline = (string)results["tagline"],
-                runtime = (int)results["runtime"]
+                tagline = string.IsNullOrEmpty((string)results["tagline"]) ? "0" : (string)results["tagline"],
+                runtime = ((int)results["runtime"])
             };
 
             return MovieDetails;
@@ -91,7 +91,7 @@ namespace movieNight.GetData
                     title = (string)results["results"][i]["title"],
                     posterUrl = (string)results["results"][i]["poster_path"],
                     overview = (string)results["results"][i]["overview"],
-                    releaseDate = (string)results["results"][i]["overview"],
+                    releaseDate = (string)results["results"][i]["release_date"],
                     id = (int)results["results"][i]["id"]
                 };
                 Movies.Add(data);
