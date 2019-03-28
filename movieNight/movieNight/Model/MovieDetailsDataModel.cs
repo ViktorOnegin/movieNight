@@ -21,7 +21,8 @@ namespace movieNight.Model
         public int id { get; set; }
         public string title { get; set; }
         public string overview { get; set; }
-        public int runtime { get; set; }
+
+        public int runtime { get; set; } = 0;
         public string poster_path { get; set; } = "x";
         public string release_date { get; set; }
         public int revenue { get; set; }

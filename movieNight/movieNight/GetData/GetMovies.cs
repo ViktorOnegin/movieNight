@@ -68,7 +68,7 @@ namespace movieNight.GetData
                 release_date = (string)results["release_date"],
                 revenue = (int)results["revenue"],
                 tagline = string.IsNullOrEmpty((string)results["tagline"]) ? "0" : (string)results["tagline"],
-                runtime = ((int)results["runtime"])
+                runtime = (int)results["runtime"]
             };
 
             return MovieDetails;
