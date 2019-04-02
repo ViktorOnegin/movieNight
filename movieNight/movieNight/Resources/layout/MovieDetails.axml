@@ -59,7 +59,7 @@
 					android:layout_marginLeft="10dp"
 					android:layout_width="wrap_content"
 					android:layout_height="match_parent"
-					android:id="@+id/textView4" />
+					android:id="@+id/ReleaseDate" />
 			</LinearLayout>
 			<LinearLayout
 				android:orientation="horizontal"
@@ -70,7 +70,7 @@
 				android:layout_height="wrap_content"
 				android:id="@+id/linearLayout6">
 				<TextView
-					android:text="year"
+					android:text=""
 					android:textStyle="bold"
 					android:textColor="#000000"
 					android:textSize="20dp"
@@ -106,14 +106,50 @@
 				android:layout_height="wrap_content"
 				android:id="@+id/linearLayout6">
 				<TextView
-					android:text="time"
+					android:text=""
 					android:textStyle="bold"
 					android:textColor="#000000"
 					android:textSize="20dp"
 					android:layout_marginLeft="10dp"
 					android:layout_width="wrap_content"
 					android:layout_height="match_parent"
-					android:id="@+id/RuntimeView" />
+					android:id="@+id/Runtime" />
+			</LinearLayout>
+			<LinearLayout
+				android:orientation="horizontal"
+				android:minWidth="25px"
+				android:minHeight="25px"
+				android:layout_marginTop="20dp"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/linearLayout5">
+				<TextView
+					android:text="Popularity"
+					android:textStyle="bold"
+					android:textColor="#7c0909"
+					android:textSize="15dp"
+					android:layout_marginLeft="10dp"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:id="@+id/PopularityLabel" />
+			</LinearLayout>
+			<LinearLayout
+				android:orientation="horizontal"
+				android:minWidth="25px"
+				android:minHeight="25px"
+				android:layout_marginTop="5dp"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/linearLayout6">
+				<TextView
+					android:text=""
+					android:textStyle="bold"
+					android:textColor="#000000"
+					android:textSize="20dp"
+					android:layout_marginLeft="10dp"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:id="@+id/popularity" />
 			</LinearLayout>
 			<LinearLayout
 				android:orientation="horizontal"
@@ -142,7 +178,7 @@
 				android:layout_height="wrap_content"
 				android:id="@+id/linearLayout6">
 				<TextView
-					android:text="0000"
+					android:text=""
 					android:textStyle="bold"
 					android:textColor="#000000"
 					android:textSize="20dp"
@@ -178,14 +214,14 @@
 				android:layout_height="wrap_content"
 				android:id="@+id/linearLayout6">
 				<TextView
-					android:text="Not Available"
+					android:text=""
 					android:textStyle="bold"
 					android:textColor="#000000"
 					android:textSize="20dp"
 					android:layout_marginLeft="10dp"
 					android:layout_width="wrap_content"
 					android:layout_height="match_parent"
-					android:id="@+id/textView5" />
+					android:id="@+id/OriginalLanguage" />
 			</LinearLayout>
 			<LinearLayout
 				android:orientation="horizontal"
@@ -214,14 +250,14 @@
 				android:layout_height="wrap_content"
 				android:id="@+id/linearLayout6">
 				<TextView
-					android:text="Not Available"
+					android:text=""
 					android:textStyle="bold"
 					android:textColor="#000000"
 					android:textSize="20dp"
 					android:layout_marginLeft="10dp"
 					android:layout_width="wrap_content"
 					android:layout_height="match_parent"
-					android:id="@+id/textView5" />
+					android:id="@+id/Genres" />
 			</LinearLayout>
 			<LinearLayout
 				android:orientation="horizontal"
@@ -250,14 +286,14 @@
 				android:layout_height="wrap_content"
 				android:id="@+id/linearLayout6">
 				<TextView
-					android:text="Not Available"
+					android:text=""
 					android:textStyle="bold"
 					android:textColor="#000000"
 					android:textSize="20dp"
 					android:layout_marginLeft="10dp"
 					android:layout_width="wrap_content"
 					android:layout_height="match_parent"
-					android:id="@+id/StatusView" />
+					android:id="@+id/Status" />
 			</LinearLayout>
 			<LinearLayout
 				android:orientation="horizontal"
@@ -286,7 +322,7 @@
 				android:layout_height="wrap_content"
 				android:id="@+id/linearLayout6">
 				<TextView
-					android:text="overview"
+					android:text=""
 					android:textStyle="bold"
 					android:textColor="#000000"
 					android:textSize="20dp"

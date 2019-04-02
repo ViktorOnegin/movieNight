@@ -27,5 +27,9 @@ namespace movieNight.Model
         public string release_date { get; set; }
         public int revenue { get; set; }
         public string tagline { get; set; }
+        public string status { get; set; }
+        public string original_language { get; set; }
+        public string genres { get; set; }
+        public string popularity { get; set; }
     }
 }

@@ -39,7 +39,6 @@ namespace movieNight.GetData
                     posterUrl = (string)results["cast"][i]["poster_path"],
                     releaseDate = (string)results["cast"][i]["release_date"],
                     title = (string)results["cast"][i]["title"]
-
                 };
                 Movies.Add(data);
             }
@@ -68,7 +67,12 @@ namespace movieNight.GetData
                 release_date = (string)results["release_date"],
                 revenue = (int)results["revenue"],
                 tagline = string.IsNullOrEmpty((string)results["tagline"]) ? "0" : (string)results["tagline"],
-                runtime = (int)results["runtime"]
+                runtime = (int)results["runtime"],
+                status = (string)results["status"],
+                original_language = (string)results["original_language"],
+                popularity = ((int)results["popularity"]).ToString(),
+                genres = (string)results["genres"][0]["name"]
+     
             };
 
             return MovieDetails;
