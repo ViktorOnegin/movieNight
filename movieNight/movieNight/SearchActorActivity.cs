@@ -29,17 +29,11 @@ namespace movieNight
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.SearchActor);
-            //Thread.Sleep(5000);
 
             Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
-            //SetSupportActionBar(toolbar);
-            //var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            //SetActionBar(toolbar);
-
+            
             List = FindViewById<ListView>(Resource.Id.PeopleView);
             SearchView SearchView = FindViewById<SearchView>(Resource.Id.searchView1);
-
-            //SetSupportActionBar(toolbar);
 
             SearchView.QueryTextSubmit += SearchView_QueryTextSubmit;
             List.ItemClick += delegate (object sender, AdapterView.ItemClickEventArgs position)
@@ -49,7 +43,6 @@ namespace movieNight
                 intent.PutExtra("ActorId", x.id);
                 StartActivity(intent);
             };
-            // Android.Support.V7.Widget.SearchView search = FindViewById<Android.Support.V7.Widget.SearchView>(Resource.Id.searchView1);
         }
 
         private void SearchView_QueryTextSubmit(object sender, SearchView.QueryTextSubmitEventArgs e)
@@ -75,32 +68,13 @@ namespace movieNight
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
-            switch (item.ItemId)
+            int id = item.ItemId;
+
+            if (id == Resource.Id.back)
             {
-                case Resource.Id.back:
-                    {
-                        var activity = new Intent(this, typeof(MainActivity));
-                        StartActivity(activity);
-                        break;
-                    }
-                default:
-                    {
-                        break;
-                    }
+                var activity = new Intent(this, typeof(MainActivity));
+                StartActivity(activity);
             }
-            //int id = item.ItemId;
-            //if (id == Resource.Id.home)
-            //{
-            //    var activity = new Intent(this, typeof(MainActivity));
-            //    StartActivity(activity);
-            //    return true;
-            //}
-            //else if (id == Resource.Id.back)
-            //{
-            //    var activity = new Intent(this, typeof(MainActivity));
-            //    StartActivity(activity);
-            //    return true;
-            //}
 
             return base.OnOptionsItemSelected(item);
         }

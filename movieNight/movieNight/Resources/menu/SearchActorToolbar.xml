@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
   <item
        android:id="@+id/back"
-       android:icon="@drawable/baseline_back_24"
+       android:icon="@drawable/back_white_48"
        android:title="back"
        android:showAsAction="always"/>
 </menu>

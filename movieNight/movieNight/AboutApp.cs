@@ -19,7 +19,6 @@ namespace movieNight
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.AboutApp);
-            // Create your application here
         }
     }
 }

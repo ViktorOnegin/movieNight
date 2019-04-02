@@ -21,7 +21,6 @@ namespace movieNight
     [Activity(Theme = "@style/AppTheme.NoActionBar", Label="")]
     public class MainActivity : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
     {
-        //private List<MovieDetailsDataModel> x;
         private ListView List;
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -51,9 +50,9 @@ namespace movieNight
 
             List.ItemClick += delegate (object sender, AdapterView.ItemClickEventArgs position)
             {
-                var x = Popular.ElementAt(position.Position);
+                var popular = Popular.ElementAt(position.Position);
                 Intent intent = new Intent(this, typeof(MovieDetailActivity));
-                intent.PutExtra("MovieId", x.id);
+                intent.PutExtra("MovieId", popular.id);
                 StartActivity(intent);
             };
         }

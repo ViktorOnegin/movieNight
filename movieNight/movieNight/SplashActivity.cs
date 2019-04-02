@@ -60,8 +60,6 @@ namespace movieNight
                 ExceptionIntent.PutExtras(bundle);
                 StartActivity(ExceptionIntent);
             }
-             
-           
         }
     }
 }

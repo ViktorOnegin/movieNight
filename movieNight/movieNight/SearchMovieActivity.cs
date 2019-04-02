@@ -65,19 +65,14 @@ namespace movieNight
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
-            switch (item.ItemId)
+            int id = item.ItemId;
+
+            if (id == Resource.Id.back)
             {
-                case Resource.Id.back:
-                    {
-                        var activity = new Intent(this, typeof(MainActivity));
-                        StartActivity(activity);
-                        break;
-                    }
-                default:
-                    {
-                        break;
-                    }
+                var activity = new Intent(this, typeof(MainActivity));
+                StartActivity(activity);
             }
+            
             return base.OnOptionsItemSelected(item);
         }
     }
