@@ -30,9 +30,12 @@ namespace movieNight
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.SearchActor);
             //Thread.Sleep(5000);
+
+            Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
+            //SetSupportActionBar(toolbar);
             //var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
             //SetActionBar(toolbar);
-            Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
+
             List = FindViewById<ListView>(Resource.Id.PeopleView);
             SearchView SearchView = FindViewById<SearchView>(Resource.Id.searchView1);
 

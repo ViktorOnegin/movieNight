@@ -25,6 +25,9 @@ namespace movieNight
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.SearchMovie);
 
+            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+            SetActionBar(toolbar);
+
             List = FindViewById<ListView>(Resource.Id.PeopleView);
             SearchView SearchView = FindViewById<SearchView>(Resource.Id.searchView1);
 
@@ -52,6 +55,30 @@ namespace movieNight
             {
                 List.Adapter = new MovieAdapter(this, Movies);
             }
+        }
+
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            MenuInflater.Inflate(Resource.Menu.SearchActorToolbar, menu);
+            return true;
+        }
+
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            switch (item.ItemId)
+            {
+                case Resource.Id.back:
+                    {
+                        var activity = new Intent(this, typeof(MainActivity));
+                        StartActivity(activity);
+                        break;
+                    }
+                default:
+                    {
+                        break;
+                    }
+            }
+            return base.OnOptionsItemSelected(item);
         }
     }
 }
