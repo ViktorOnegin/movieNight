@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Android;
 using Android.App;
 using Android.Content;
@@ -20,6 +21,7 @@ namespace movieNight
     [Activity(Theme = "@style/AppTheme.NoActionBar", Label="")]
     public class MainActivity : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
     {
+        //private List<MovieDetailsDataModel> x;
         private ListView List;
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -46,6 +48,14 @@ namespace movieNight
             {
                 List.Adapter = new MovieAdapter(this, Popular);
             }
+
+            List.ItemClick += delegate (object sender, AdapterView.ItemClickEventArgs position)
+            {
+                var x = Popular.ElementAt(position.Position);
+                Intent intent = new Intent(this, typeof(MovieDetailActivity));
+                intent.PutExtra("MovieId", x.id);
+                StartActivity(intent);
+            };
         }
 
         public override void OnBackPressed()
