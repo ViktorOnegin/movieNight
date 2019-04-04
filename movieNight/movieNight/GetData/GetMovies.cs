@@ -71,8 +71,8 @@ namespace movieNight.GetData
                 status = (string)results["status"],
                 original_language = (string)results["original_language"],
                 popularity = ((int)results["popularity"]).ToString(),
-                genres = (string)results["genres"][0]["name"]
-     
+                genres = (string)results["genres"][0]["name"] + ", " + (string)results["genres"][1]["name"] + ", " + (string)results["genres"][2]["name"]
+
             };
 
             return MovieDetails;

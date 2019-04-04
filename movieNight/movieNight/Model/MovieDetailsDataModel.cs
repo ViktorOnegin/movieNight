@@ -29,7 +29,7 @@ namespace movieNight.Model
         public string tagline { get; set; }
         public string status { get; set; }
         public string original_language { get; set; }
-        public string genres { get; set; }
         public string popularity { get; set; }
+        public string genres { get; set; }
     }
 }
