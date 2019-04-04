@@ -21,7 +21,7 @@ using movieNight.Model;
 namespace movieNight
 {
     [Activity(Theme = "@style/AppTheme", Label ="")]
-    public class SearchActorActivity : AppCompatActivity
+    public class SearchActorActivity : Activity
     {
         private List<PeopleDataModel> Actors;
         private ListView List;
@@ -30,8 +30,10 @@ namespace movieNight
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.SearchActor);
 
-            Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
-            
+            //Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
+            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+            SetActionBar(toolbar);
+
             List = FindViewById<ListView>(Resource.Id.PeopleView);
             SearchView SearchView = FindViewById<SearchView>(Resource.Id.searchView1);
 
