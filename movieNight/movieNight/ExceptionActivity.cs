@@ -19,12 +19,15 @@ namespace movieNight
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.ExceptionLayout);
+            Button Retry = FindViewById<Button>(Resource.Id.Retry);
             int drawableId;
             string errorMessage = "";
             if( this.Intent.Extras != null)
             {
                 errorMessage = Intent.Extras.GetString("ExceptionMessage");
             }
+
+            Retry.Click += Retry_Click;
             
             switch (errorMessage.ToString())
             {
@@ -38,6 +41,12 @@ namespace movieNight
                 default:
                 break;
             }
+        }
+
+        private void Retry_Click(object sender, EventArgs e)
+        {
+            var activity = new Intent(this, typeof(SplashActivity));
+            StartActivity(activity);
         }
     }
 } 

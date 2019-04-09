@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
 	android:gravity="center"
 	android:background="#000000">
 	<ImageView
@@ -11,7 +12,8 @@
 		android:layout_height="200dp"
 		android:minWidth="25px"
 		android:minHeight="25px"
-		android:id="@+id/ImageView1" />
+		android:id="@+id/ImageView1"
+		android:layout_marginTop="96.0dp" />
 	<TextView
 		android:text="F***"
 		android:gravity="center"
@@ -27,6 +29,16 @@
 		android:gravity="center"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:id="@+id/SmallExceptionText" />
+		android:id="@+id/SmallExceptionText"
+		android:layout_marginBottom="14.5dp" />
+	<Button
+		android:text="Try Again"
+		android:textStyle="bold"
+		android:layout_width="match_parent"
+		android:layout_height="133.0dp"
+		android:background="#000000"
+		android:textColor="#FFFFFF"
+		android:id="@+id/Retry"
+		android:layout_marginTop="0.0dp" />
 
 </LinearLayout>
