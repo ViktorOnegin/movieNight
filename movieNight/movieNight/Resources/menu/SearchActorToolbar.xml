@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
   <item
        android:id="@+id/back"
+       android:layout_gravity="right"
        android:icon="@drawable/back_white_48"
        android:title="back"
        android:showAsAction="always"/>

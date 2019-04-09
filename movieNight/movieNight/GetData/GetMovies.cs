@@ -50,9 +50,9 @@ namespace movieNight.GetData
         {
             string key = "ed47b05cca6dc603460f42899bea7008";
             string url = "https://api.themoviedb.org/3/movie/" + id + "?api_key=" + key + "&language=en-US";
-
+            int NumberOfResults;
             dynamic results = await DataService.GetDataFromService(url).ConfigureAwait(false);
-
+            NumberOfResults = ((JArray)results["genres"]).Count;
 
             MovieDetailsDataModel MovieDetails = new MovieDetailsDataModel();
             MovieDetails = new MovieDetailsDataModel
@@ -71,10 +71,13 @@ namespace movieNight.GetData
                 status = (string)results["status"],
                 original_language = (string)results["original_language"],
                 popularity = ((int)results["popularity"]).ToString(),
-                genres = (string)results["genres"][0]["name"] + ", " + (string)results["genres"][1]["name"] + ", " + (string)results["genres"][2]["name"]
 
             };
 
+            for (int i = 0; i < NumberOfResults; i++)
+            {
+                MovieDetails.genres += (string)results["genres"][i]["name"] + " ";
+            }
             return MovieDetails;
         }
 
